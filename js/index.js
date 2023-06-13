@@ -30,4 +30,5 @@ form.addEventListener("submit", function (event) {
   console.log(number);
   console.log(invalidCheck2);
   window.alert("cadastro feito com sucesso!");
+  location.reload();
 });
