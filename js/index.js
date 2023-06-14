@@ -32,3 +32,7 @@ form.addEventListener("submit", function (event) {
   window.alert("cadastro feito com sucesso!");
   location.reload();
 });
+
+function validateTextInput(input) {
+  input.value = input.value.replace(/[^a-zA-Z]/, '');
+}
