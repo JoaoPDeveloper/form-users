@@ -1,4 +1,10 @@
-*{
- color: rgb(255, 255, 255);
- background-color: rgb(23, 6, 68);
+* {
+ background-color: #ffffff;
+ color: #000000;
+ margin: 1px;
+}
+
+#tabela,
+#thead{
+border-radius: 12px;
 }
