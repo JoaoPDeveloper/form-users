@@ -1,10 +1,40 @@
 * {
- background-color: #ffffff;
- color: #000000;
+ background-color: #100433;
+  color: #ffffff;
  margin: 1px;
+ font-family: 'Space Mono', monospace;
 }
+#textForm{
+ font-weight: 700;
+}
+#colId{
+ background-color: #100433;
+ border: none;
+ border-radius: 18px;
+}
+#cardItem{
+ background-color: yellow;
+ border-radius: 18px;
+}
+#cards{
 
+ border-radius: 18px;
+}
 #tabela,
 #thead{
-border-radius: 12px;
+font-size: 16px;
+color: yellow;
+}
+.cor-customizada {
+ color: #51ff00; /* Define a cor vermelha para o texto */
+}
+.bg-custom {
+ background-color: #ff0000; /* Define a cor vermelha para o fundo */
+}
+
+option{
+ background-color: #20043f;
+}
+#thead{
+ background-color: black;
 }
