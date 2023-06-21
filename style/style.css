@@ -1,11 +1,42 @@
 * {
  background-color: #100433;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
   color: #ffffff;
  margin: 1px;
  font-family: 'Space Mono', monospace;
 }
+#body{
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+ background-color: #100433;
+}
 #textForm{
  font-weight: 700;
+}
+#tasks{
+ height: 120px;
+}
+.form-control.adjustable {
+ resize: vertical;
+}
+#emailForm{
+ text-decoration: none;
+ color: yellow;
+ padding: 5px;
+ border-radius: 8px;
+ padding: 5px;
+ margin: 5px;
+ transition: 0.5s ease-in-out;
+}
+#emailForm:hover{
+ background-color: rgb(255, 255, 255);
+ color: black;
+
+}
+#activites{
+ background-color: rgb(37, 25, 96);
+ color: white;
 }
 #colId{
  background-color: #100433;
@@ -13,28 +44,20 @@
  border-radius: 18px;
 }
 #cardItem{
- background-color: yellow;
+ border-color: rgb(255, 255, 255);
  border-radius: 18px;
+ border: 1px solid transparent;
+
 }
 #cards{
-
  border-radius: 18px;
+ border: 5px solid transparent;
+ transition: 0.5s ease-in-out;
 }
-#tabela,
-#thead{
-font-size: 16px;
-color: yellow;
-}
-.cor-customizada {
- color: #51ff00; /* Define a cor vermelha para o texto */
-}
-.bg-custom {
- background-color: #ff0000; /* Define a cor vermelha para o fundo */
+#cards:hover {
+ border-color: #ffffff;
+ box-shadow:  0.5rem 0.5rem 1rem rgba(235, 0, 0, 0.15);
+ transform: translateZ(1px); 
 }
 
-option{
- background-color: #20043f;
-}
-#thead{
- background-color: black;
-}
+
