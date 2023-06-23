@@ -4,6 +4,7 @@
   -moz-osx-font-smoothing: grayscale;
   color: #ffffff;
   margin: 1px;
+  zoom: 98%;
   font-family: "Space Mono", monospace;
 }
 #body {
