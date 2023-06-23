@@ -13,7 +13,6 @@ form.addEventListener("submit", (event) => {
   const tasks = event.target.tasks.value;
   const dateStart = moment(event.target.dateStart.value).format("DD/MM/YYYY");
   const dateEnd = moment(event.target.dateEnd.value).format("DD/MM/YYYY");
-  const number = event.target.number.value;
 
   // Verificar se o data de inicio e de fim sao validos
   const dateEndTasks = new Date(form.dateEnd.value);
@@ -47,7 +46,6 @@ form.addEventListener("submit", (event) => {
           tasks,
           dateStart,
           dateEnd,
-          number,
         };
       } else {
         return usuario;
@@ -65,7 +63,6 @@ form.addEventListener("submit", (event) => {
       tasks,
       dateStart,
       dateEnd,
-      number,
     };
 
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
@@ -81,7 +78,6 @@ form.addEventListener("submit", (event) => {
       tasks,
       dateStart,
       dateEnd,
-      number,
     });
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
@@ -119,7 +115,6 @@ function atualizarTabela() {
       <p class="card-text form-control text-center " id="activites">${
         usuario.tasks
       }</p>      
-        <p class="card-text">Contato: ${usuario.number}</p>
         <p class="card-text ">Data de Inicio: ${usuario.dateStart}</p>
         <p class="card-text ">Data de Fim: ${usuario.dateEnd}</p>
         <button class="btn btn-outline-info" type="button" onclick="editarUsuario('${
@@ -136,7 +131,7 @@ function atualizarTabela() {
       if (link) {
         event.preventDefault();
         const projectName = link.dataset.project;
-        const textToCopy = `Projeto: ${projectName}\nAtividades: ${usuario.tasks}\nE-mail: ${usuario.email}\nE-mail Adicional: ${usuario.emailAdicional}\nContato: ${usuario.number}\nData de Inicio: ${usuario.dateStart}\nData de Fim: ${usuario.dateEnd}`;
+        const textToCopy = `Projeto: ${projectName}\nAtividades: ${usuario.tasks}\nE-mail: ${usuario.email}\nE-mail Adicional: ${usuario.emailAdicional}\nData de Inicio: ${usuario.dateStart}\nData de Fim: ${usuario.dateEnd}`;
         navigator.clipboard
           .writeText(textToCopy)
           .then(() => {
@@ -179,7 +174,6 @@ function editarUsuario(email) {
     form.email.value = usuarioSelecionado.email;
 
     form.tasks.value = usuarioSelecionado.tasks;
-    form.number.value = usuarioSelecionado.number;
     form.dateStart.value = moment(
       usuarioSelecionado.dateStart,
       "DD/MM/YYYY"
